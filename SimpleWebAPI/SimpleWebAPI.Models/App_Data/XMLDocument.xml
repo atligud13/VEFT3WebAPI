@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimpleWebAPI.Models</name>
+    </assembly>
+    <members>
+        <member name="P:SimpleWebAPI.Models.AddCourseViewModel.CourseID">
+            <summary>
+            Course ID of this course
+            For example: T-514-VEFT
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Models.AddCourseViewModel.Semester">
+            <summary>
+            Specifies which semester this particular course is in.
+            For example: 20153 would mean that it the course is 
+            from the year 2015, and it's the third semester of the year.
+            With Spring being first, summer second and autumn third, 
+            20153 would mean Autumn 2015.
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Models.AddCourseViewModel.StartDate">
+            <summary>
+            Start date of this course
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Models.AddCourseViewModel.EndDate">
+            <summary>
+            End date of this course
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Models.CourseDetailsDTO.Name">
+            <summary>
+            Name of the course
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Models.CourseDetailsDTO.CourseID">
+            <summary>
+            Template ID of the course
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Models.CourseDetailsDTO.ID">
+            <summary>
+            Database ID for this course
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Models.CourseDetailsDTO.StartDate">
+            <summary>
+            Start date of this course
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Models.CourseDetailsDTO.EndDate">
+            <summary>
+            End date of this course
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Models.CourseDetailsDTO.Students">
+            <summary>
+            A list of students enrolled in the course
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Models.CourseDTO.Name">
+            <summary>
+            Name of the course
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Models.CourseDTO.CourseID">
+            <summary>
+            Template ID of the course
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Models.CourseDTO.ID">
+            <summary>
+            Database ID for this course
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Models.CourseDTO.StartDate">
+            <summary>
+            Start date of this course
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Models.CourseDTO.EndDate">
+            <summary>
+            End date of this course
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Models.CourseDTO.StudentCount">
+            <summary>
+            The number students enrolled in the course
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Models.UpdateCourseViewModel.StartDate">
+            <summary>
+            Start date of this course
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Models.UpdateCourseViewModel.EndDate">
+            <summary>
+            End date of this course
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Models.StudentDTO.ID">
+            <summary>
+            Database ID for this student
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Models.StudentDTO.SSN">
+            <summary>
+            Social security number of this student
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Models.StudentDTO.Name">
+            <summary>
+            The name of this student
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Models.StudentViewModel.SSN">
+            <summary>
+            Social security number of this student
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Models.StudentViewModel.Name">
+            <summary>
+            The name of this student
+            </summary>
+        </member>
+    </members>
+</doc>

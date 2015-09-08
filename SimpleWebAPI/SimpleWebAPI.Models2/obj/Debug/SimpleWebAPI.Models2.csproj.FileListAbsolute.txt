@@ -1,0 +1,4 @@
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT3WebAPI\SimpleWebAPI\SimpleWebAPI.Models2\bin\Debug\SimpleWebAPI.Models2.dll
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT3WebAPI\SimpleWebAPI\SimpleWebAPI.Models2\bin\Debug\SimpleWebAPI.Models2.pdb
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT3WebAPI\SimpleWebAPI\SimpleWebAPI.Models2\obj\Debug\SimpleWebAPI.Models2.dll
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT3WebAPI\SimpleWebAPI\SimpleWebAPI.Models2\obj\Debug\SimpleWebAPI.Models2.pdb

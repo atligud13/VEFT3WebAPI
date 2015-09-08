@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimpleWebAPI.Services</name>
+    </assembly>
+    <members>
+        <member name="M:SimpleWebAPI.Services.CoursesServiceProvider.GetCoursesBySemester(System.String)">
+            <summary>
+            Returns a list of courses for a given semester.
+            If no semester is provided, the current semester
+            will be provided.
+            </summary>
+            <param name="semester"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SimpleWebAPI.Services.CoursesServiceProvider.GetCourseByID(System.Int32)">
+            <summary>
+            Returns a single course with the specified ID
+            If no course is found then a course not found exception is thrown
+            </summary>
+            <param name="courseModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SimpleWebAPI.Services.CoursesServiceProvider.AddCourse(SimpleWebAPI.Models.AddCourseViewModel)">
+            <summary>
+            Adds the course to the list of courses.
+            If an entry for the given CourseID does not exist 
+            in the course template list, an object not found exception is thrown.
+            </summary>
+            <param name="course"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SimpleWebAPI.Services.CoursesServiceProvider.UpdateCourse(System.Int32,SimpleWebAPI.Models.UpdateCourseViewModel)">
+            <summary>
+            Updates the course with the given ID, if a course
+            with the given ID was not found then null an object not 
+            found exception is thrown.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SimpleWebAPI.Services.CoursesServiceProvider.DeleteCourse(System.Int32)">
+            <summary>
+            Deletes the course with the given ID.
+            If a course with the given ID was not found then
+            an object not found exception is thrown.
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SimpleWebAPI.Services.CoursesServiceProvider.GetStudentsByCourseID(System.Int32)">
+            <summary>
+            Returns a list of students signed up for the course
+            with the given ID. If no students are signed up for the course
+            an empty list should be returned.
+            If no course is found for the given ID, en error is thrown.
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SimpleWebAPI.Services.CoursesServiceProvider.AddStudentToCourse(System.Int32,SimpleWebAPI.Models.StudentViewModel)">
+            <summary>
+            Adds the student to the course with the given ID
+            If no course/student is found, an Object not found exception is thrown.
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SimpleWebAPI.Services.Entities.Course.ID">
+            <summary>
+            Database ID for this course
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Services.Entities.Course.CourseID">
+            <summary>
+            Template ID of this course
+            For example: T-514-VEFT
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Services.Entities.Course.StartDate">
+            <summary>
+            Start date of this course
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Services.Entities.Course.EndDate">
+            <summary>
+            End date of this course
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Services.Entities.Course.Semester">
+            <summary>
+            Specifies which semester this particular course is in.
+            For example: 20153 would mean that it the course is 
+            from the year 2015, and it's the third semester of the year.
+            With Spring being first, summer second and autumn third, 
+            20153 would mean Autumn 2015.
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Services.Entities.CourseRegistration.ID">
+            <summary>
+            The ID of this registration
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Services.Entities.CourseRegistration.StudentID">
+            <summary>
+            The ID of the student
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Services.Entities.CourseRegistration.CourseID">
+            <summary>
+            The ID of the course.
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Services.Entities.CourseTemplate.ID">
+            <summary>
+            The database generated ID of the template
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Services.Entities.CourseTemplate.Name">
+            <summary>
+            Specifies the name of this course
+            For example: Web Services
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Services.Entities.CourseTemplate.CourseID">
+            <summary>
+            Specifies the course ID of this course
+            For example: T-514-VEFT
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Services.Entities.Person.ID">
+            <summary>
+            Database ID for this person
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Services.Entities.Person.SSN">
+            <summary>
+            Social security number of this person
+            </summary>
+        </member>
+        <member name="P:SimpleWebAPI.Services.Entities.Person.Name">
+            <summary>
+            The name of this person
+            </summary>
+        </member>
+    </members>
+</doc>

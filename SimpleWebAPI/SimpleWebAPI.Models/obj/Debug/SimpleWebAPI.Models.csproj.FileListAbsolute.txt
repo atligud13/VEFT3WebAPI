@@ -1,0 +1,14 @@
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT2WebAPI\SimpleWebAPI\SimpleWebAPI.Models\obj\Debug\SimpleWebAPI.Models.csprojResolveAssemblyReference.cache
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT2WebAPI\SimpleWebAPI\SimpleWebAPI.Models\obj\Debug\SimpleWebAPI.Models.dll
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT2WebAPI\SimpleWebAPI\SimpleWebAPI.Models\obj\Debug\SimpleWebAPI.Models.pdb
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT2WebAPI\SimpleWebAPI\SimpleWebAPI.Models\bin\SimpleWebAPI.Models.dll
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT2WebAPI\SimpleWebAPI\SimpleWebAPI.Models\bin\SimpleWebAPI.Models.pdb
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT2WebAPI\SimpleWebAPI\SimpleWebAPI.Models\bin\APIModels.xml
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT3WebAPI\SimpleWebAPI\SimpleWebAPI.Models\bin\SimpleWebAPI.Models.dll
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT3WebAPI\SimpleWebAPI\SimpleWebAPI.Models\bin\SimpleWebAPI.Models.pdb
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT3WebAPI\SimpleWebAPI\SimpleWebAPI.Models\bin\APIModels.xml
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT3WebAPI\SimpleWebAPI\SimpleWebAPI.Models\obj\Debug\SimpleWebAPI.Models.dll
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT3WebAPI\SimpleWebAPI\SimpleWebAPI.Models\obj\Debug\SimpleWebAPI.Models.pdb
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT3WebAPI\SimpleWebAPI\SimpleWebAPI.Models\bin\Debug\SimpleWebAPI.Models.dll
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT3WebAPI\SimpleWebAPI\SimpleWebAPI.Models\bin\Debug\SimpleWebAPI.Models.pdb
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT3WebAPI\SimpleWebAPI\SimpleWebAPI.Models\bin\Debug\APIModels.xml
