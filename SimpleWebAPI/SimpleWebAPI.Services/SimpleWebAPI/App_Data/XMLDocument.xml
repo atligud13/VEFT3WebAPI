@@ -76,6 +76,14 @@
             <param name="student"></param>
             <returns></returns>
         </member>
+        <member name="M:SimpleWebAPI.Services.CoursesServiceProvider.RemoveStudentFromCourse(System.Int32,System.String)">
+            <summary>
+            Removes the student from the course with the given ID
+            by setting his "active" status to false.
+            </summary>
+            <param name="courseID"></param>
+            <param name="studentSSN"></param>
+        </member>
         <member name="M:SimpleWebAPI.Services.CoursesServiceProvider.GetCourseWaitingList(System.Int32)">
             <summary>
             Returns a list of students on the waiting list for the 

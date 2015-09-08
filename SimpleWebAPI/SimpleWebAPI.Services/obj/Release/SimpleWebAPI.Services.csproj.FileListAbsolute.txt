@@ -1,0 +1,12 @@
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT3WebAPI\SimpleWebAPI\SimpleWebAPI.Services\bin\Release\SimpleWebAPI.Services.dll.config
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT3WebAPI\SimpleWebAPI\SimpleWebAPI.Services\bin\Release\SimpleWebAPI.Services.dll
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT3WebAPI\SimpleWebAPI\SimpleWebAPI.Services\bin\Release\SimpleWebAPI.Services.pdb
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT3WebAPI\SimpleWebAPI\SimpleWebAPI.Services\bin\Release\EntityFramework.dll
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT3WebAPI\SimpleWebAPI\SimpleWebAPI.Services\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT3WebAPI\SimpleWebAPI\SimpleWebAPI.Services\bin\Release\SimpleWebAPI.Models2.dll
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT3WebAPI\SimpleWebAPI\SimpleWebAPI.Services\bin\Release\SimpleWebAPI.Models2.pdb
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT3WebAPI\SimpleWebAPI\SimpleWebAPI.Services\bin\Release\EntityFramework.xml
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT3WebAPI\SimpleWebAPI\SimpleWebAPI.Services\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT3WebAPI\SimpleWebAPI\SimpleWebAPI.Services\obj\Release\SimpleWebAPI.Services.csprojResolveAssemblyReference.cache
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT3WebAPI\SimpleWebAPI\SimpleWebAPI.Services\obj\Release\SimpleWebAPI.Services.dll
+C:\Users\Atli\Documents\HR\Haust2015\Vefþjónustur\Verkefni\VEFT3WebAPI\SimpleWebAPI\SimpleWebAPI.Services\obj\Release\SimpleWebAPI.Services.pdb

@@ -49,7 +49,7 @@ namespace SimpleWebAPI.Services
                               StartDate    = c.StartDate,
                               CourseID     = c.CourseID,
                               EndDate      = c.EndDate,
-                              StudentCount = _db.CourseRegistrations.Count(x => x.CourseID == c.ID)
+                              StudentCount = _db.CourseRegistrations.Count(x => x.CourseID == c.ID && x.Active == true)
                           }).ToList();
 
             return result;
@@ -122,27 +122,26 @@ namespace SimpleWebAPI.Services
             // 2. Create the database object
             var courseEntity = new Course
             {
-                CourseID  = course.TemplateID,
-                StartDate = course.StartDate,
-                EndDate   = course.EndDate,
-                Semester  = course.Semester
+                CourseID    = course.TemplateID,
+                StartDate   = course.StartDate,
+                EndDate     = course.EndDate,
+                Semester    = course.Semester,
+                MaxStudents = course.MaxStudents
             };
 
             _db.Courses.Add(courseEntity);
             _db.SaveChanges();
 
-            // 3. Create the return object
-            var createdCourseEntity = _db.Courses.SingleOrDefault(x => x.CourseID == course.TemplateID && x.Semester == course.Semester);
-
-
+            // 3. Create the return 
             CourseDetailsDTO courseDTO = new CourseDetailsDTO
             {
-                ID        = createdCourseEntity.ID,
-                CourseID  = course.TemplateID,
-                StartDate = course.StartDate,
-                EndDate   = course.EndDate,
-                Name      = courseTemplate.Name,
-                Students  = null
+                ID          = courseEntity.ID,
+                CourseID    = courseEntity.CourseID,
+                StartDate   = courseEntity.StartDate,
+                EndDate     = courseEntity.EndDate,
+                Name        = courseTemplate.Name,
+                Students    = null,
+                MaxStudents = courseEntity.MaxStudents
             };
 
             return courseDTO;
@@ -167,8 +166,9 @@ namespace SimpleWebAPI.Services
                 throw new CourseNotFoundException();
             }
 
-            courseEntity.StartDate = course.StartDate;
-            courseEntity.EndDate   = course.EndDate;
+            courseEntity.StartDate   = course.StartDate;
+            courseEntity.EndDate     = course.EndDate;
+            courseEntity.MaxStudents = course.MaxStudents;
 
             _db.SaveChanges();
 
@@ -180,7 +180,7 @@ namespace SimpleWebAPI.Services
                 throw new ApplicationException("Something went horribly wrong");
             }
 
-            var studentCount = _db.CourseRegistrations.Count(x => x.CourseID == courseEntity.ID);
+            var studentCount = _db.CourseRegistrations.Count(x => x.CourseID == courseEntity.ID && x.Active == true);
 
             var returnValue = new CourseDTO
             {
@@ -286,7 +286,7 @@ namespace SimpleWebAPI.Services
             }
 
             // Checking to see if the course is full
-            int studentCount = _db.CourseRegistrations.Count(x => x.CourseID == ID);
+            int studentCount = _db.CourseRegistrations.Count(x => x.CourseID == ID && x.Active == true);
             if (studentCount >= courseEntity.MaxStudents)
             {
                 throw new CourseFullException();
@@ -308,6 +308,7 @@ namespace SimpleWebAPI.Services
             if(waiting != null)
             {
                 _db.CourseWaitingList.Remove(waiting);
+                _db.SaveChanges();
             }
 
             // 2. Saving the registration
@@ -339,6 +340,34 @@ namespace SimpleWebAPI.Services
             };
 
             return studentDTO;
+        }
+
+        /// <summary>
+        /// Removes the student from the course with the given ID
+        /// by setting his "active" status to false.
+        /// </summary>
+        /// <param name="courseID"></param>
+        /// <param name="studentSSN"></param>
+        public void RemoveStudentFromCourse(int courseID, string studentSSN)
+        {
+            // 1. Validation
+            var course = _db.Courses.SingleOrDefault(x => x.ID == courseID);
+
+            if (course == null)
+            {
+                throw new CourseNotFoundException();
+            }
+
+            var student = _db.Persons.SingleOrDefault(x => x.SSN == studentSSN);
+            if(student == null)
+            {
+                throw new StudentNotFoundException();
+            }
+            var registration = _db.CourseRegistrations.SingleOrDefault(x => x.StudentID == student.ID && x.CourseID == course.ID);
+
+            // 2. Setting the entry to false
+            registration.Active = false;
+            _db.SaveChanges();
         }
 
 

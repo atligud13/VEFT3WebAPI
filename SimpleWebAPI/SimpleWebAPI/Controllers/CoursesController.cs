@@ -185,13 +185,49 @@ namespace SimpleWebAPI.Controllers
                 }
                 catch (StudentAlreadyEnrolledException)
                 {
-                    throw new HttpResponseException(HttpStatusCode.BadRequest);
+                    throw new HttpResponseException(HttpStatusCode.PreconditionFailed);
+                }
+                catch (CourseFullException)
+                {
+                    throw new HttpResponseException(HttpStatusCode.PreconditionFailed);
                 }
             }
             else
             {
                 return StatusCode(HttpStatusCode.PreconditionFailed);
             }
+        }
+
+        /// <summary>
+        /// Removes the student from the course. His registration will not be 
+        /// deleted though. His status will only be set to non active.
+        /// </summary>
+        /// <param name="courseID"></param>
+        /// <param name="studentSSN"></param>
+        [HttpDelete]
+        [Route("{courseID:int}/students/{studentSSN}")]
+        public IHttpActionResult RemoveStudentFromCourse(int courseID, string studentSSN)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _service.RemoveStudentFromCourse(courseID, studentSSN);
+                }
+                catch(CourseNotFoundException)
+                {
+                    throw new HttpResponseException(HttpStatusCode.NotFound);
+                }
+                catch (StudentNotFoundException)
+                {
+                    throw new HttpResponseException(HttpStatusCode.NotFound);
+                }
+            }
+            else
+            {
+                throw new HttpResponseException(HttpStatusCode.PreconditionFailed);
+            }
+            return StatusCode(HttpStatusCode.NoContent);
         }
 
         /// <summary>
@@ -229,7 +265,7 @@ namespace SimpleWebAPI.Controllers
                 try
                 {
                     StudentDTO student = _service.AddStudentToWaitingList(id, newStudent);
-                    return Content(HttpStatusCode.Created, student);
+                    return StatusCode(HttpStatusCode.OK);
                 }
                 catch (CourseNotFoundException)
                 {
@@ -241,11 +277,11 @@ namespace SimpleWebAPI.Controllers
                 }
                 catch (StudentAlreadyEnrolledException)
                 {
-                    throw new HttpResponseException(HttpStatusCode.BadRequest);
+                    throw new HttpResponseException(HttpStatusCode.PreconditionFailed);
                 }
                 catch (StudentAlreadyOnWaitingListException)
                 {
-                    throw new HttpResponseException(HttpStatusCode.BadRequest);
+                    throw new HttpResponseException(HttpStatusCode.PreconditionFailed);
                 }
             }
             else

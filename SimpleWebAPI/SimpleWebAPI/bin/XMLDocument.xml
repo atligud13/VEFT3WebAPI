@@ -530,6 +530,14 @@
             <param name="newStudent"></param>
             <returns></returns>
         </member>
+        <member name="M:SimpleWebAPI.Controllers.CoursesController.RemoveStudentFromCourse(System.Int32,System.String)">
+            <summary>
+            Removes the student from the course. His registration will not be 
+            deleted though. His status will only be set to non active.
+            </summary>
+            <param name="courseID"></param>
+            <param name="studentSSN"></param>
+        </member>
         <member name="M:SimpleWebAPI.Controllers.CoursesController.GetWaitingList(System.Int32)">
             <summary>
             Returns a list of students on the waiting list
