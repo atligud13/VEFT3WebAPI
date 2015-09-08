@@ -199,14 +199,13 @@ namespace SimpleWebAPI.Controllers
         }
 
         /// <summary>
-        /// Removes the student from the course. His registration will not be 
-        /// deleted though. His status will only be set to non active.
+        /// Removes the student from the course wit the given ID.
         /// </summary>
         /// <param name="courseID"></param>
         /// <param name="studentSSN"></param>
         [HttpDelete]
         [Route("{courseID:int}/students/{studentSSN}")]
-        public IHttpActionResult RemoveStudentFromCourse(int courseID, string studentSSN)
+        public void RemoveStudentFromCourse(int courseID, string studentSSN)
         {
             if (ModelState.IsValid)
             {
@@ -227,7 +226,6 @@ namespace SimpleWebAPI.Controllers
             {
                 throw new HttpResponseException(HttpStatusCode.PreconditionFailed);
             }
-            return StatusCode(HttpStatusCode.NoContent);
         }
 
         /// <summary>
@@ -265,7 +263,7 @@ namespace SimpleWebAPI.Controllers
                 try
                 {
                     StudentDTO student = _service.AddStudentToWaitingList(id, newStudent);
-                    return StatusCode(HttpStatusCode.OK);
+                    return Content(HttpStatusCode.OK, student);
                 }
                 catch (CourseNotFoundException)
                 {
